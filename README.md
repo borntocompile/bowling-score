@@ -6,6 +6,10 @@ It calculates all the complicated rules of bowling so you don't have to.
 All you need to do is create a player and inform it of what the player scored that "turn".  
 The API will inform you when a player has completed all thier frames, when all your players have invoked this event your game is complete.
 
+## Requirements
+Support for Unity 2018.x  
+The code will run in older versions of Unity, however the assembly definition will not.
+
 ## API
 
 You can create a new player by newing the class `Player`  
