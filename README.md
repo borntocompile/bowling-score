@@ -16,7 +16,7 @@ var player = new Player(name: "Hazza")
 A players score card is made up of a collection of Frames.  
 Each frame is made up of a collection Rolls. 
 
-To apply a score to the Player, simpley use
+To apply a score to the Player, simply use
 ```c#
 player.Roll(score);
 ```
