@@ -145,7 +145,7 @@ namespace MFG.Bowling
 
 		private static bool IsStrike(int score)
 		{
-			return score == 10;
+			return score == Constants.maxRollScore;
 		}
 
 		private bool IsLastFrame()
