@@ -12,6 +12,14 @@ The code will run in older versions of Unity, however the assembly definition wi
 
 ## API
 
+### Player
+`string Name`  
+`Frame[] Frames`  
+`int TotalScore`  
+  
+`event Action<Frame> OnFrameComplete`  
+`event Action OnFramesCompleted`  
+
 You can create a new player by newing the class `Player`  
 ```c#
 var player = new Player(name: "Hazza")
@@ -33,7 +41,32 @@ player.OnFrameComplete += frame =>
 };
 ```
 
-### Example
+### Frame
+`int Index`  
+`FrameScoreType ScoreType`  
+`List<Roll> Roll`  
+`int TotalScore`  
+
+A game of bowling consists of ten frames.  
+
+### Roll
+`int Score`
+`FrameScoreType ScoreType`
+
+### ScoreType
+```c#
+public enum FrameScoreType
+{
+	Unplayed,
+	Strike,
+	Spare,
+	Standard,
+	Miss,
+	Foul
+}
+```
+
+## Example
 An example script is included, it can be found at `MFG.Bowling.Example`  
 Attach the Example MonoBehaviour to a GameObject in your scene and run the game.   
 Check the console for the logs of what happened in the game.  
